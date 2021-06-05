@@ -16,4 +16,15 @@ public class LinkedListTest {
         Assert.assertTrue(firstNode.getNext().equals(secondNode) &&
                  secondNode.getNext().equals(thirdNode));
     }
+
+    @Test
+    public void givenThreeNumber_WhenAddedToLinkedList_ReturnTruIfAddedInOrder() {
+        LinkedList<Integer> list = new LinkedList<>();
+        list.add(70);
+        list.add(30);
+        list.add(56);
+        list.printLinkedList();
+        Assert.assertTrue(list.head.data == 56 && list.head.getNext().data == 30
+                && list.tail.data == 70);
+    }
 }
