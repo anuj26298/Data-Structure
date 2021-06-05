@@ -1,4 +1,5 @@
 package com.datastructure.com.datastructure.linkedlist;
+
 import com.datastructure.linkedlist.*;
 import org.junit.Assert;
 import org.junit.Test;
@@ -14,7 +15,7 @@ public class LinkedListTest {
         firstNode.setNext(secondNode);
         secondNode.setNext(thirdNode);
         Assert.assertTrue(firstNode.getNext().equals(secondNode) &&
-                 secondNode.getNext().equals(thirdNode));
+                secondNode.getNext().equals(thirdNode));
     }
 
     @Test
@@ -27,4 +28,16 @@ public class LinkedListTest {
         Assert.assertTrue(list.head.data == 56 && list.head.getNext().data == 30
                 && list.tail.data == 70);
     }
+
+    @Test
+    public void givenThreeNumber_WhenAppendToLinkedList_ReturnTrueIfAppendedCorrectly() {
+        LinkedList<Integer> list = new LinkedList<>();
+        list.add(56);
+        list.append(30);
+        list.append(70);
+        list.printLinkedList();
+        Assert.assertTrue(list.head.data == 56 && list.head.getNext().data == 30
+                && list.tail.data == 70);
+    }
+
 }
