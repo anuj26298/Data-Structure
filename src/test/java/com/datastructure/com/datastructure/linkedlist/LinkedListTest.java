@@ -40,4 +40,14 @@ public class LinkedListTest {
                 && list.tail.data == 70);
     }
 
+    @Test
+    public void givenTwoNumbers_InsertThirdNumberInBetween_ReturnTrueIfInsertedSuccessfully() {
+        LinkedList<Integer> list = new LinkedList<>();
+        list.append(70);
+        list.append(56);
+        list.insert(70,30);
+        list.printLinkedList();
+        Assert.assertTrue(list.head.data == 70 && list.head.getNext().data == 30
+                && list.tail.data== 56);
+    }
 }
