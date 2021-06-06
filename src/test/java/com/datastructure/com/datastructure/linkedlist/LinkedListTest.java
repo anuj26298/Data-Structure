@@ -50,4 +50,17 @@ public class LinkedListTest {
         Assert.assertTrue(list.head.data == 70 && list.head.getNext().data == 30
                 && list.tail.data== 56);
     }
+
+    @Test
+    public void givenLinkedList_DeleteFirstElement_ReturnTrueIfDeletedSuccessfully() {
+        LinkedList<Integer> list = new LinkedList<>();
+        list.add(56);
+        list.add(30);
+        list.add(70);
+        list.printLinkedList();
+        list.deleteFirstElement();
+        list.printLinkedList();
+        Assert.assertTrue(list.head.data == 30 && list.head.getNext().data == 56);
+
+    }
 }

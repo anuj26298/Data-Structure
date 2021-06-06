@@ -39,6 +39,14 @@ public class LinkedList<E> {
         else
             System.out.println("Given node " + atlocation + " is not present.");
     }
+
+    public void deleteFirstElement(){
+        if (head == null)
+            System.out.println("Deletion Failed: List is Empty");
+        else
+            head = head.next;
+    }
+
     public void printLinkedList() {
         Node<E> temp = head;
         while (temp != null) {
