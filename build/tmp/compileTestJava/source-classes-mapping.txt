@@ -6,3 +6,5 @@ com/datastructure/stack/StackTest.java
  com.datastructure.stack.StackTest
 com/datastructure/hashmap/HashMapTest.java
  com.datastructure.hashmap.HashMapTest
+com/datastructure/binarysearchtree/BinarySearchTreeTest.java
+ com.datastructure.binarysearchtree.BinarySearchTreeTest

@@ -1,16 +1,20 @@
-com/datastructure/linkedlist/Node.java
- com.datastructure.linkedlist.Node
-com/datastructure/linkedlist/LinkedList.java
- com.datastructure.linkedlist.LinkedList
-com/datastructure/stack/Stack.java
- com.datastructure.stack.Stack
-com/datastructure/queue/Queue.java
- com.datastructure.queue.Queue
 com/datastructure/hashmap/HashMap.java
  com.datastructure.hashmap.HashMap
+com/datastructure/binarysearchtree/BinarySearchTree.java
+ com.datastructure.binarysearchtree.BinarySearchTree
+com/datastructure/linkedlist/Node.java
+ com.datastructure.linkedlist.Node
+com/datastructure/queue/Queue.java
+ com.datastructure.queue.Queue
+com/datastructure/hashmap/HashTable.java
+ com.datastructure.hashmap.HashTable
+com/datastructure/binarysearchtree/Node.java
+ com.datastructure.binarysearchtree.Node
 com/datastructure/hashmap/Node.java
  com.datastructure.hashmap.Node
 com/datastructure/hashmap/LinkedList.java
  com.datastructure.hashmap.LinkedList
-com/datastructure/hashmap/HashTable.java
- com.datastructure.hashmap.HashTable
+com/datastructure/linkedlist/LinkedList.java
+ com.datastructure.linkedlist.LinkedList
+com/datastructure/stack/Stack.java
+ com.datastructure.stack.Stack
