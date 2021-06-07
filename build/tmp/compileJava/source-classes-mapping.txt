@@ -6,3 +6,9 @@ com/datastructure/stack/Stack.java
  com.datastructure.stack.Stack
 com/datastructure/queue/Queue.java
  com.datastructure.queue.Queue
+com/datastructure/hashmap/HashMap.java
+ com.datastructure.hashmap.HashMap
+com/datastructure/hashmap/Node.java
+ com.datastructure.hashmap.Node
+com/datastructure/hashmap/LinkedList.java
+ com.datastructure.hashmap.LinkedList
