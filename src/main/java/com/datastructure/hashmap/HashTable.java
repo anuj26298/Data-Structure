@@ -2,54 +2,65 @@ package com.datastructure.hashmap;
 
 import java.util.ArrayList;
 
-public class HashTable<K,V> {
-        int bucketSize;
+public class HashTable<K, V> {
+    int bucketSize;
 
-        ArrayList<LinkedList<K,V>> bucket;
+    ArrayList<LinkedList<K, V>> bucket;
 
-        public  HashTable(){
-            bucketSize = 10;
-            this.bucket = new ArrayList<>();
+    public HashTable() {
+        bucketSize = 10;
+        this.bucket = new ArrayList<>();
 
-            for (int i=0;i<bucketSize;i++)
-                this.bucket.add(null);
+        for (int i = 0; i < bucketSize; i++)
+            this.bucket.add(null);
+    }
+
+    public int getBucketIndex(K key) {
+        int hashcode = Math.abs(key.hashCode());
+        return hashcode % bucketSize;
+    }
+
+    public V get(K key) {
+        int index = this.getBucketIndex(key);
+        LinkedList<K, V> linkedList = this.bucket.get(index);
+
+        if (linkedList == null)
+            return null;
+
+        Node<K, V> node = linkedList.search(key);
+        if (node == null)
+            return null;
+        else
+            return node.getValue();
+    }
+
+    public void add(K key, V value) {
+        int index = this.getBucketIndex(key);
+        LinkedList<K, V> linkedList = this.bucket.get(index);
+
+        if (linkedList == null) {
+            linkedList = new LinkedList<>();
+            bucket.set(index, linkedList);
         }
 
-        public int getBucketIndex(K key){
-            int hashcode = Math.abs(key.hashCode());
-            return hashcode%bucketSize;
-        }
-        public void add(K key, V value){
-            int index = this.getBucketIndex(key);
-            LinkedList<K,V> linkedList = this.bucket.get(index);
+        Node<K, V> node = linkedList.search(key);
 
-            if (linkedList== null){
-                linkedList = new LinkedList<>();
-                bucket.set(index, linkedList);
-            }
+        if (node == null) {
+            node = new Node<>(key, value);
+            linkedList.append(node);
+        } else
+            node.setValue(value);
 
-            Node<K,V> node = linkedList.search(key);
+    }
 
-            if (node == null){
-                node = new Node<>(key,value);
-                linkedList.append(node);
-            }
-            else
-                node.setValue(value);
+    public void remove(K key){
+        int index = this.getBucketIndex(key);
+        LinkedList<K,V> linkedList = this.bucket.get(index);
+        if (linkedList == null)
+            System.out.println("Key Not Present");
+        else
+            linkedList.delete(key);
+    }
 
-        }
 
-        public V get(K key){
-            int index = this.getBucketIndex(key);
-            LinkedList<K,V> linkedList = this.bucket.get(index);
-
-            if (linkedList == null)
-                return null;
-
-            Node<K,V> node = linkedList.search(key);
-            if (node == null)
-                return null;
-            else
-                return node.getValue();
-        }
 }
