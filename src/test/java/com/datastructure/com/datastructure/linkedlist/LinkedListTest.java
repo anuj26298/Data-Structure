@@ -89,4 +89,16 @@ public class LinkedListTest {
         int count = list.search(30);
         Assert.assertEquals(3, count);
     }
+
+    @Test
+    public void givenInterges_WhenAddedToLinkedList_ReturnTrueIfListIsSorted() {
+        LinkedList<Integer> list = new LinkedList<>();
+        list.sortedAdd(56);
+        list.sortedAdd(30);
+        list.sortedAdd(70);
+        list.printLinkedList();
+        Assert.assertTrue(list.head.data == 30 && list.head.next.data == 56 &&
+                list.head.next.next.data == 70 );
+    }
+
 }

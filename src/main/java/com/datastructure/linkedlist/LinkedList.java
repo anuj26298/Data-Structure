@@ -1,6 +1,6 @@
 package com.datastructure.linkedlist;
 
-public class LinkedList<E> {
+public class LinkedList<E extends Comparable<E>> {
     public Node<E> head = null;
     public Node<E> tail = null;
 
@@ -83,6 +83,22 @@ public class LinkedList<E> {
             System.out.println("Element not present in list");
 
         return count;
+    }
+    public void sortedAdd(E data){
+        Node<E> newNode = new Node<>(data);
+        Node<E> temp;
+
+        if (head == null || head.data.compareTo(data) > 0){
+            newNode.next = head;
+            head = newNode;
+        }
+        else {
+            temp = head;
+            while (temp.next != null && temp.next.data.compareTo(data) < 0)
+                temp = temp.next;
+            newNode.next = temp.next;
+            temp.next = newNode;
+        }
     }
 
     public void printLinkedList() {
