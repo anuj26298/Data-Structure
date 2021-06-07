@@ -1,8 +1,8 @@
 com/datastructure/linkedlist/LinkedListTest.java
  com.datastructure.linkedlist.LinkedListTest
-com/datastructure/stack/StackTest.java
- com.datastructure.stack.StackTest
 com/datastructure/queue/QueueTest.java
  com.datastructure.queue.QueueTest
+com/datastructure/stack/StackTest.java
+ com.datastructure.stack.StackTest
 com/datastructure/hashmap/HashMapTest.java
  com.datastructure.hashmap.HashMapTest

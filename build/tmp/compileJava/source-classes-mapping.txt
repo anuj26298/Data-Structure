@@ -12,3 +12,5 @@ com/datastructure/hashmap/Node.java
  com.datastructure.hashmap.Node
 com/datastructure/hashmap/LinkedList.java
  com.datastructure.hashmap.LinkedList
+com/datastructure/hashmap/HashTable.java
+ com.datastructure.hashmap.HashTable
