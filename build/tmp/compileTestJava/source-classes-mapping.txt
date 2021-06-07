@@ -1,2 +1,4 @@
-com/datastructure/com/datastructure/linkedlist/LinkedListTest.java
- com.datastructure.com.datastructure.linkedlist.LinkedListTest
+com/datastructure/linkedlist/LinkedListTest.java
+ com.datastructure.linkedlist.LinkedListTest
+com/datastructure/stack/StackTest.java
+ com.datastructure.stack.StackTest

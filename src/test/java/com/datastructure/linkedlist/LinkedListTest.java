@@ -1,6 +1,5 @@
-package com.datastructure.com.datastructure.linkedlist;
+package com.datastructure.linkedlist;
 
-import com.datastructure.linkedlist.*;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -80,7 +79,7 @@ public class LinkedListTest {
     }
 
     @Test
-    public void givenInterger_WhenSearchInLinkedList_ReturnTrueIfElementPresent() {
+    public void givenInteger_WhenSearchInLinkedList_ReturnTrueIfElementPresent() {
         LinkedList<Integer> list = new LinkedList<>();
         list.add(56);
         list.add(70);
@@ -91,7 +90,7 @@ public class LinkedListTest {
     }
 
     @Test
-    public void givenInterges_WhenAddedToLinkedList_ReturnTrueIfListIsSorted() {
+    public void givenInteger_WhenAddedToLinkedList_ReturnTrueIfListIsSorted() {
         LinkedList<Integer> list = new LinkedList<>();
         list.sortedAdd(56);
         list.sortedAdd(30);
