@@ -60,6 +60,30 @@ public class LinkedList<E> {
         }
     }
 
+    public int search(E data){
+        int count = 1;
+        Node<E> temp = head;
+        boolean flag = false;
+        if (head == null)
+            System.out.println("List is Empty");
+        else {
+
+            while (temp != null){
+                if (temp.data == data){
+                    flag = true;
+                    break;
+                }
+                count++;
+                temp = temp.next;
+            }
+        }
+        if (flag)
+            System.out.println("Element is present at" + count);
+        else
+            System.out.println("Element not present in list");
+
+        return count;
+    }
 
     public void printLinkedList() {
         Node<E> temp = head;

@@ -79,5 +79,14 @@ public class LinkedListTest {
 
     }
 
+    @Test
+    public void givenInterger_WhenSearchInLinkedList_ReturnTrueIfElementPresent() {
+        LinkedList<Integer> list = new LinkedList<>();
+        list.add(56);
+        list.add(70);
+        list.append(30);
 
+        int count = list.search(30);
+        Assert.assertEquals(3, count);
+    }
 }
