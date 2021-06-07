@@ -41,7 +41,7 @@ public class LinkedListTest {
     }
 
     @Test
-    public void givenTwoNumbers_InsertThirdNumberInBetween_ReturnTrueIfInsertedSuccessfully() {
+    public void givenTwoNumbers_WhenInsertThirdNumberInBetween_ReturnTrueIfInsertedSuccessfully() {
         LinkedList<Integer> list = new LinkedList<>();
         list.append(70);
         list.append(56);
@@ -52,15 +52,32 @@ public class LinkedListTest {
     }
 
     @Test
-    public void givenLinkedList_DeleteFirstElement_ReturnTrueIfDeletedSuccessfully() {
+    public void givenLinkedList_WhenDeleteFirstElement_ReturnTrueIfDeletedSuccessfully() {
         LinkedList<Integer> list = new LinkedList<>();
         list.add(56);
         list.add(30);
         list.add(70);
         list.printLinkedList();
-        list.deleteFirstElement();
+        list.pop();
         list.printLinkedList();
         Assert.assertTrue(list.head.data == 30 && list.head.getNext().data == 56);
 
     }
+
+    @Test
+    public void givenLinkedList_WhenDeleteLastElement_ReturnTrueIfDeletedSuccessfully() {
+        LinkedList<Integer> list = new LinkedList<>();
+        list.add(70);
+        list.add(30);
+        list.add(56);
+        list.printLinkedList();
+        System.out.println();
+        list.popLast();
+        list.printLinkedList();
+
+        Assert.assertTrue(list.head.data == 56 && list.head.getNext().data == 30);
+
+    }
+
+
 }

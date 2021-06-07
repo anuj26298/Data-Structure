@@ -40,12 +40,26 @@ public class LinkedList<E> {
             System.out.println("Given node " + atlocation + " is not present.");
     }
 
-    public void deleteFirstElement(){
+    public void pop(){
         if (head == null)
             System.out.println("Deletion Failed: List is Empty");
         else
             head = head.next;
     }
+
+    public void popLast(){
+        if (head == null)
+            System.out.println("Deletion Failed: List is Empty");
+        else {
+            Node<E> temp = head;
+            while (temp.next != tail)
+                temp = temp.next;
+            tail = temp;
+            temp.next = null;
+
+        }
+    }
+
 
     public void printLinkedList() {
         Node<E> temp = head;
